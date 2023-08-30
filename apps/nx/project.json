@@ -16,7 +16,15 @@
         "tsConfig": "apps/nx/tsconfig.app.json",
         "assets": ["apps/nx/src/assets"],
         "isolatedConfig": true,
-        "webpackConfig": "apps/nx/webpack.config.js"
+        "webpackConfig": "apps/nx/webpack.config.js",
+        "transformers": [
+          {
+            "name": "@nestjs/swagger/plugin",
+            "options": {
+              "introspectComments": true
+            }
+          }
+        ]
       },
       "configurations": {
         "development": {},
